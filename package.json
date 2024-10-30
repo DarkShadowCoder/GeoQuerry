@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "ionicons": "^7.4.0",
+    "react-native-animatable": "^1.4.0",
+    "react-native-icons": "^0.7.1",
+    "react-native-linear-gradient": "^2.8.3"
+  }
+}
