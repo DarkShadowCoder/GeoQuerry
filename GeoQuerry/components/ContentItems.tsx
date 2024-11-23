@@ -14,7 +14,7 @@ const ContentItems = (props) => {
             height: '100%',
             borderRadius: 15,
             borderWidth: 1,
-            borderColor: Colors.dark.gray
+            borderColor: Colors.GRAY
         }} />
         <View style={styles.contentText}>
             <Text style={styles.teacher}>
@@ -31,12 +31,12 @@ const ContentItems = (props) => {
                     alignItems: "center",
                     gap: 4,
                 }}>
-                    <Ionicons name="calendar" size={15} color={Colors.light.gray} />
+                    <Ionicons name="calendar" size={15} color={Colors.GRAY} />
                     <Text style={{
                         fontSize: 15,
                         fontFamily: 'outfit',
                         textAlign: 'left',
-                        color: Colors.light.gray
+                        color: Colors.GRAY
                     }}>
                         {props.date}
                     </Text>
@@ -44,7 +44,7 @@ const ContentItems = (props) => {
                 <Ionicons 
                 name='send-outline' 
                 size={20} 
-                color={Colors.light.primary} 
+                color={Colors.PRIMARY} 
                 style={{
                     fontFamily: 'outfit-medium',
                     fontWeight: 'bold',
@@ -68,8 +68,8 @@ const styles = StyleSheet.create({
         borderRadius: 20,
         width: '100%',
         height: 175,
-        backgroundColor: Colors.dark.text,
-        shadowColor: Colors.light.gray,
+        backgroundColor: Colors.BLACK,
+        shadowColor: Colors.GRAY,
         elevation: 10,
         shadowOffset: {width: 8, height: 9},
         shadowRadius: 7,
@@ -94,13 +94,13 @@ const styles = StyleSheet.create({
     teacher:{
         fontSize: 20,
         fontFamily: 'outfit',
-        color: Colors.light.gray,
+        color: Colors.GRAY,
         textAlign: 'left',
     },
     title:{
         fontSize: 24,
         fontFamily: 'outfit-medium',
-        color: Colors.light.text,
+        color: Colors.BLACK,
         textAlign: 'left',
     }
 })
