@@ -29,7 +29,7 @@ const Header = () => {
           name='notifications-outline' 
           size={25}
           style={{
-            borderColor: Colors.dark.gray,
+            borderColor: Colors.GRAY,
             borderWidth: 1.5,
             textAlign: 'center',
             width: 40,
@@ -39,14 +39,14 @@ const Header = () => {
           }}
           />
           <Image 
-          source={require('../assets/images/react-logo.png')} 
+          source={require('../assets/images/user.png')} 
           alt='logo' 
           style={{
             objectFit: 'cover',
             width: 40,
             height: 40,
             borderRadius: 50,
-            backgroundColor: Colors.dark.background
+            backgroundColor: Colors.WHITE
           }}
           />
         </View>
@@ -96,17 +96,17 @@ const styles = StyleSheet.create({
     gap: 15,
   },
   searchBar:{
-    backgroundColor: Colors.light.background,
+    backgroundColor: Colors.WHITE,
     flexDirection: 'row',
     gap: 1,
     justifyContent: 'center',
     alignItems: 'center',
     width: '100%',
     height: 50,
-    borderColor: Colors.light.gray,
+    borderColor: Colors.GRAY,
     borderWidth: 1.5,
     borderRadius: 50,
-    shadowColor: Colors.light.gray,
+    shadowColor: Colors.GRAY,
     shadowOffset: {width: 5, height: 5},
     shadowRadius: 10,
     shadowOpacity: 0.7,
