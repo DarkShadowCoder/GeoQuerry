@@ -94,7 +94,7 @@ export default function RootLayout() {
       <MyTabs />
    </NavigationContainer>
    */
-  <MapScreen />
+  <Home />
   );
 }
 
