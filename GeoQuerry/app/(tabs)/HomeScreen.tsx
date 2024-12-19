@@ -1,5 +1,5 @@
-import { Image, StyleSheet, Text, TextInput, View } from 'react-native'
-import React from 'react'
+import { Image, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native'
+import React,{useState} from 'react'
 import Header from '@/components/Header'
 import { Colors } from '@/constants/Colors'
 import ContentItems from '@/components/ContentItems'
@@ -8,6 +8,7 @@ import ContentItems from '@/components/ContentItems'
 const Home = () => {
   //const { user } = useUser()
   const cours = false
+  const [category, setCategory] = useState(false)
   return (
     <View>
         <View style={styles.container}>
@@ -27,6 +28,48 @@ const Home = () => {
               <Text style={styles.title}>
                 Programmes
               </Text>
+              <View style={styles.wrapperContainer}>
+                <View style={category && styles.wrapperContent || 
+                {
+                  width: 150,
+                  height: "auto",
+                  paddingVertical: 10,
+                  backgroundColor: Colors.BLACK,
+                  borderRadius: 25,
+                }}>
+                  <Text style={category && {
+                    fontFamily: "outfit",
+                    fontSize: 20,
+                    textAlign: "center",
+                    color: Colors.BLACK
+                  }||{
+                    fontFamily: "outfit",
+                    fontSize: 20,
+                    textAlign: "center",
+                    color: Colors.WHITE
+                  }}>Cours </Text>
+                </View>
+                <View style={!category && styles.wrapperContent || 
+                {
+                  width: 150,
+                  height: "auto",
+                  paddingVertical: 10,
+                  backgroundColor: Colors.BLACK,
+                  borderRadius: 25,
+                }}>
+                  <Text style={!category && {
+                    fontFamily: "outfit",
+                    fontSize: 20,
+                    textAlign: "center",
+                    color: Colors.BLACK
+                  }||{
+                    fontFamily: "outfit",
+                    fontSize: 20,
+                    textAlign: "center",
+                    color: Colors.WHITE
+                  }}>Classe </Text>
+                </View>
+              </View>
               {cours && (
                 <ContentItems 
                 image={require('@/assets/images/react-logo.png')}
@@ -44,7 +87,30 @@ const Home = () => {
               </View>
               }
             </View>
-
+            <TouchableOpacity
+            onPress={()=> console.log('Course creation')}
+            style={{
+              backgroundColor: Colors.PRIMARY,
+              borderRadius: 25,
+              width: "100%",
+              height: "auto",
+              paddingVertical: 25,
+              shadowColor: Colors.SECONDARY,
+              shadowOffset: {width: 10,height: 5},
+              shadowOpacity: 0.9,
+              shadowRadius: 10,
+              elevation: 12
+            }}
+            >
+              <Text style={{
+                fontFamily: "outfit-medium",
+                fontSize: 25,
+                textAlign: "center",
+                color: Colors.BLACK
+              }}>
+                 Creer un nouveau Cours
+              </Text>
+            </TouchableOpacity>
           </View>
     </View>
   )
@@ -88,5 +154,22 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center'
+  },
+  wrapperContainer:{
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    width: "100%",
+    height: "auto",
+    paddingVertical: 15,
+
+  },
+  wrapperContent:{
+    width: 150,
+    height: "auto",
+    paddingVertical: 10,
+    borderColor: Colors.BLACK,
+    backgroundColor: Colors.GRAY,
+    borderRadius: 25,
   }
 })
